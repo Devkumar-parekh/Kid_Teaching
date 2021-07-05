@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>
+        progress
+    </title>
+    <style>
+      div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: right;
+        width: 600px;
+      }
+  
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+  
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      progress {
+    width: 50%;
+    height: 20px;
+    color: #3fb6b2;
+    background: #efefef;
+}
+    </style>
+  </head>
+  
+  <body style="background-color: silver;">
+  
+    <div class="gallery">
+      <a>
+        <img src="progress_img.gif" alt="Cinque Terre" width="600" height="400">
+      </a>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+	
+	<?php
+
+
+		$conn=new mysqli("localhost","root","","project");
+
+		$sql="SELECT * FROM record";
+		$result=$conn->query($sql);
+		$row=$result->fetch_array();
+		$p1=$row['progress'];
+		$p2=$row['num_progress'];
+		echo 'Alphabet: <progress id="alphabet" min="0" max="26" value="1"></progress><br><br>
+	Numbers:  <progress id="numbers" min="0" max="9" value="1">
+    </progress><br><br>';
+	?>
+	
+	
+    
+  <button><a href="login1.html" target="default">Back</a></button>
+</body>
+
+</html>

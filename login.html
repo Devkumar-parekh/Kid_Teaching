@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <title>
+    Login
+  </title>
+  <style>
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: right;
+  width: 600px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+  
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body style="background-color: lightgrey;">
+
+
+  <div class="gallery">
+    <a>
+      <img src="login_img.gif"  width="600" height="400">
+    </a>
+  </div>
+
+  <form action="login.php" method='post'>
+ 
+ 
+
+    <center>
+      <img src="login-fill.svg" alt="" width="72" height="57"><br><br>
+      <h1>Sign Up</h1><br><br>
+
+
+      Id :
+      <input type="text" name='no' placeholder="enter your number"/><br><br>
+
+      Password :
+      <input type="password" name='pswd' id='pswd' placeholder="Password"/><br><br>
+
+      <button type="submit" class="btn btn-primary">Login</button>
+	  <br>
+	  if new user ,then try <a href='register.html'>register<a/>
+	  
+      <p>&copy; 2021-2022</p>
+    </center>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>T-S</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+       <link rel="stylesheet" href="styles.css">
+
+
+<script>
+
+
+function readOutLoud() {
+	var speech = new SpeechSynthesisUtterance();
+	message=document.getElementById('note-textarea').value;
+  // Set the text and voice attributes.
+	speech.text = message;
+	speech.volume = 1;
+	speech.rate = 1;
+	speech.pitch = 1;
+  
+	window.speechSynthesis.speak(speech);
+}
+
+
+</script>
+
+
+
+
+
+    </head>
+    <body style="border-color:red;padding:20px">
+        <div class="container">
+
+            <h1> Text To Speech</h1>
+            <p class="page-description">Hello , Give your text and get the speech</p>
+           
+            <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+
+            <div class="app"> 
+                <h3>Add the text</h3>
+                <div class="input-single">
+                    <textarea id="note-textarea" placeholder="type something" rows="6"></textarea>
+                </div>         
+                <button id="save-note-btn"  style="background-color:#f60;margin:15px;padding:25px;border-radius:5px;color:white" onclick="readOutLoud()" title="Save Note">Speak</button>   
+                
+
+            </div>
+
+        </div>
+
+       <script src="script.js"></script>
+
+    
+
+	
+
+    </body>
+</html>
+
+

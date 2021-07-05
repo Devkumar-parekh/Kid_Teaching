@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>
+        frameset
+    </title>
+    <style>
+
+        body{
+          background-image: url('main_img.gif');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-attachment: scroll;
+          background-position: top;
+        }
+      
+        </style>
+</head>
+<frameset rows="20%,*">
+    <frame name="title" src="title.html" />
+    <frame name="default" src="default.html" />
+
+    <noframes>
+
+        <body>
+            not supported
+        </body>
+    </noframes>
+
+</frameset>
+
+</html>

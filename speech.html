@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>
+testing
+</title>
+</head>
+<body>
+speech recognition
+<input type="text" id="speech" placeholder="speak something" onclick=record()/>
+
+<script>
+function record(){
+var recognition= new webkitSpeechRecognition();
+recognition.lang="en-GB"
+
+recognition.onresult()=function(event){
+console.log(event);
+document.getElementById('speech').value=event.result[0][0].transcript;
+
+}
+recognition.start();
+}
+</script>
+</body>
+</html>
